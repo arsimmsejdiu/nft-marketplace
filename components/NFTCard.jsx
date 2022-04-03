@@ -5,7 +5,7 @@ import { COLORS, SIZES, SHADOWS, assets } from "../constants";
 import { CircleButton, RectButton } from "./CircleButton";
 import { NFTTitle, EthPrice, SubInfo } from "./SubInfo";
 
-const NFTCard = ({ item }) => {
+const NFTCard = ({ data }) => {
   const navigation = useNavigation();
 
   return (
@@ -20,7 +20,7 @@ const NFTCard = ({ item }) => {
     >
       <View style={{ width: "100%", height: 250 }}>
         <Image
-          source={item.image}
+          source={data.image}
           resizeMode="cover"
           style={{
             width: "100%",
@@ -34,8 +34,8 @@ const NFTCard = ({ item }) => {
       <SubInfo />
       <View style={{ width: "100%", padding: SIZES.font }}>
         <NFTTitle
-          title={item.name}
-          subTitle={item.creator}
+          title={data.name}
+          subTitle={data.creator}
           titleSize={SIZES.large}
           subTitleSize={SIZES.small}
         />
@@ -47,11 +47,11 @@ const NFTCard = ({ item }) => {
             alignItems: "center",
           }}
         >
-          <EthPrice price={item.price} />
+          <EthPrice price={data.price} />
           <RectButton
             minWidth={120}
             fontSize={SIZES.font}
-            handlePress={() => navigation.navigate("Details", { item })}
+            handlePress={() => navigation.navigate("Details", { data })}
           />
         </View>
       </View>
