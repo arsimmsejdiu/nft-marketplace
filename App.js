@@ -43,3 +43,5 @@ const App = () => {
 };
 
 export default App;
+
+//https://expo.dev/@arsimsejdiu/nft-marketplace?serviceType=classic&distribution=expo-go
