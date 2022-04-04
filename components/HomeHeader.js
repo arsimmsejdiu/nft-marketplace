@@ -1,9 +1,16 @@
+import React from "react";
 import { View, Text, Image, TextInput } from "react-native";
-import { COLORS, SIZES, FONTS, assets } from "../constants";
+
+import { COLORS, FONTS, SIZES, assets } from "../constants";
 
 const HomeHeader = ({ onSearch }) => {
   return (
-    <View style={{ backgroundColor: COLORS.primary, padding: SIZES.font }}>
+    <View
+      style={{
+        backgroundColor: COLORS.primary,
+        padding: SIZES.font,
+      }}
+    >
       <View
         style={{
           flexDirection: "row",
@@ -14,8 +21,9 @@ const HomeHeader = ({ onSearch }) => {
         <Image
           source={assets.logo}
           resizeMode="contain"
-          style={{ width: 100, height: 40 }}
+          style={{ width: 90, height: 25 }}
         />
+
         <View style={{ width: 45, height: 45 }}>
           <Image
             source={assets.person01}
@@ -35,6 +43,7 @@ const HomeHeader = ({ onSearch }) => {
           />
         </View>
       </View>
+
       <View style={{ marginVertical: SIZES.font }}>
         <Text
           style={{
@@ -43,8 +52,9 @@ const HomeHeader = ({ onSearch }) => {
             color: COLORS.white,
           }}
         >
-          Hello, Arsim 👋
+          Hello Arsim 👋
         </Text>
+
         <Text
           style={{
             fontFamily: FONTS.bold,
@@ -53,26 +63,29 @@ const HomeHeader = ({ onSearch }) => {
             marginTop: SIZES.base / 2,
           }}
         >
-          Let's find a masterpiece
+          Let’s find masterpiece Art
         </Text>
       </View>
+
       <View style={{ marginTop: SIZES.font }}>
-        <View style={{ 
-          width: "100%",
-          borderRadius: SIZES.font,
-          backgroundColor: COLORS.gray,
-          flexDirection: "row",
-          alignItems: "center",
-          paddingHorizontal: SIZES.font,
-          paddingVertical: SIZES.small - 2,
-         }}>
+        <View
+          style={{
+            width: "100%",
+            borderRadius: SIZES.font,
+            backgroundColor: COLORS.gray,
+            flexDirection: "row",
+            alignItems: "center",
+            paddingHorizontal: SIZES.font,
+            paddingVertical: SIZES.small - 2,
+          }}
+        >
           <Image
             source={assets.search}
             resizeMode="contain"
             style={{ width: 20, height: 20, marginRight: SIZES.base }}
           />
           <TextInput
-            placeholder="Search NFTs marketplace ... "
+            placeholder="Search NFTs"
             style={{ flex: 1 }}
             onChangeText={onSearch}
           />
