@@ -52,7 +52,7 @@ const HomeHeader = ({ onSearch }) => {
             color: COLORS.white,
           }}
         >
-          Hello Arsim 👋
+          Hello Victoria 👋
         </Text>
 
         <Text
